@@ -2,118 +2,119 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
-  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta chaarset="UTF-8">
+  <meta name="viewport" content="width-device-width, initial-scale-1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Fend Landing Page</title>
 </head>
 
 <body>
-  <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar navbar-inverse"></nav>
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#section1">Udacity</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#section1">one</a></li>
-        <li><a href="#section2">two</a></li>
-        <li><a href="#section3">three</a></li>
-        <li><a href="#section4">four</a></li>
+
+  <div class="container-fluid mt-4">
+    <h1 class="display-4 text-center">
+      <i class="fas fa-book-open text-primary"></i><span class="text-primary">Scroll to section</span>
+    </h1>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="#">Udacity</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-link="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-link="sec2">sec 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-link="sec3">sec 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-link="sec4">sec 4</a>
+        </li>
       </ul>
+
     </div>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Landing Page </h1>
-    </header>
-    <!-- Each Section has an ID (used for the anchor) and 
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
-          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
-          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
-          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
-          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
-          semper in tellus. Sed congue et odio sed euismod.</p>
+  </nav>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
-          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
-          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 content">
+        <h1 id="home">home</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.</p>
       </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
-          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
-          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
-          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
-          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
-          semper in tellus. Sed congue et odio sed euismod.</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
-          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
-          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+
+      <div class="col-sm-12 content">
+        <h1 id="sec2">sec2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.</p>
       </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
-          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
-          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
-          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
-          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
-          semper in tellus. Sed congue et odio sed euismod.</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
-          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
-          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      <div class="col-sm-12 content">
+        <h1 id="sec3">sec3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.</p>
       </div>
-    </section>
-    <section id="section4" data-nav="Section 4">
-      <div class="landing__container">
-        <h2>Section 4</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
-          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
-          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
-          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
-          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
-          semper in tellus. Sed congue et odio sed euismod.</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
-          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
-          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+      <div class="col-sm-12 content">
+        <h1 id="sec4">sec4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptatum dolorem aut corporis earum
+          ratione commodi quibusdam quasi. Doloremque quaerat dolorem tempore nihil nam, illum laborum omnis dolore
+          atque dolorum.</p>
       </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
 
-  <script src="js/app.js"></script>
+    </div>
+  </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js">
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+
 </body>
 
 </html>
